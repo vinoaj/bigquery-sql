@@ -1,0 +1,37 @@
+#legacySQL
+SELECT visitId
+  , visitNumber
+  , visitStartTime
+  , date
+  , totals.*
+  , hits.hitNumber
+  , trafficSource.*
+  , device.*
+  , geoNetwork.*
+  , hits.type
+  , hits.page.*
+  , hits.transaction.*
+  , hits.item.*
+  , hits.contentInfo.*
+  , hits.appInfo.*
+  , hits.exceptionInfo.*
+  , hits.eventInfo.*
+  , hits.refund.*
+  , hits.eCommerceAction.*
+  , hits.experiment.*
+  , hits.publisher.*
+  , hits.social.*
+  , hits.latencyTracking.*
+  , hits.sourcePropertyInfo.*
+  , hits.contentGroup.*
+  , hits.dataSource
+  , fullVisitorId
+  , userId
+  , clientId
+  , channelGrouping
+  , socialEngagementType
+  , exportTimeUsec
+  , exportKey
+  , visitKey
+FROM [XXXXXX.ga_realtime_sessions_view_20180912] 
+ORDER BY visitId, hits.hitNumber ASC
